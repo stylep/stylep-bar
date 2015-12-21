@@ -1,17 +1,19 @@
-# stylep-template
+# stylep-bar
 
-Everything you need to get started making a new style pattern.
+A basic element for making horizontal navigation bars.
 
 ## Install
+You can install using the [spm](https://github.com/stylep/stylep) command or install using npm and the project name.
+
 ``` shell
-npm i --save-dev stylep-name
+spm install bar
 ```
 
 ## Usage
 ``` css
 /* name.css */
 
-@import “stylep-name”;
+@import “stylep-bar”;
 
 .class {
 
