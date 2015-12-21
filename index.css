@@ -1,8 +1,69 @@
-%name-of-pattern {
+%bar-inline {
+  max-height: 58px;
+  min-height: 58px;
+  z-index: 100;
+
+  & nav {
+    /* @extend %column; */
+    padding: .5em 0;
+
+    &:nth-child(even) > ul {
+      /* @extend %end; */
+
+      & > li { margin-left: 10px; }
+    }
+
+    &:nth-child(odd) > ul {
+      /* @extend %start; */
+
+      & > li { margin-right: 10px; }
+    }
+
+    & > ul {
+      /* @extend %middle; */
+      display: flex;
+      flex-wrap: wrap;
+      height: 41px;
+      list-style: none;
+
+      & > li { display: inline-block; }
+
+      & h1,
+      & h2,
+      & h3,
+      & h4,
+      & h5,
+      & h6 {
+        display: inline;
+        font-size: 1.25em;
+        font-weight: 400;
+        margin-right: 30px;
+        margin-top: 0;
+        overflow: hidden;
+        position: relative;
+        text-transform: uppercase;
+        padding: 0;
+      }
+    }
+  }
 }
 
-@define-mixin name-of-style
-  $param-name: default-value {
+%bar-block {
+  @extend %bar-inline;
+  /* @extend %row; */
+}
+
+@define-mixin bar-solid
+  $background,
+  $border-color: transparent,
+  $border-width: 0
+{
+  background-color: $background;
+  border-width: $border-width;
+  border-style: solid;
+  border-color: $border-color;
+  color: contrast($background);
+  padding: 0 rs(.5);
 
   @mixin-content;
 }
