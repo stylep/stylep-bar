@@ -1,3 +1,5 @@
+@import "stylep-alignment"
+
 %bar-inline {
   max-height: 58px;
   min-height: 58px;
@@ -8,13 +10,13 @@
     padding: .5em 0;
 
     &:nth-child(even) > ul {
-      /* @extend %end; */
+      @extend %end;
 
       & > li { margin-left: 10px; }
     }
 
     &:nth-child(odd) > ul {
-      /* @extend %start; */
+      @extend %start;
 
       & > li { margin-right: 10px; }
     }
