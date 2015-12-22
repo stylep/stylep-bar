@@ -11,7 +11,7 @@ spm install bar
 
 ## Usage
 ``` css
-/* name.css */
+/* bar.css */
 
 @import “stylep-bar”;
 
