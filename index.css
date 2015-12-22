@@ -1,12 +1,14 @@
-@import "stylep-alignment"
+@import 'stylep-grid';
+@import 'stylep-alignment';
 
 %bar-inline {
   max-height: 58px;
   min-height: 58px;
+  padding: 0 16px;
   z-index: 100;
 
   & nav {
-    /* @extend %column; */
+    @extend %column;
     padding: .5em 0;
 
     &:nth-child(even) > ul {
@@ -22,7 +24,7 @@
     }
 
     & > ul {
-      /* @extend %middle; */
+      @extend %middle;
       display: flex;
       flex-wrap: wrap;
       height: 41px;
@@ -52,7 +54,7 @@
 
 %bar-block {
   @extend %bar-inline;
-  /* @extend %row; */
+  @extend %row;
 }
 
 @define-mixin bar-solid
@@ -65,7 +67,6 @@
   border-style: solid;
   border-color: $border-color;
   color: contrast($background);
-  padding: 0 rs(.5);
 
   @mixin-content;
 }
