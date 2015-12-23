@@ -1,7 +1,7 @@
 {
-  "name": "stylep-button",
+  "name": "stylep-bar",
   "version": "0.1.0",
-  "description": "A simple button style pattern for your next project.",
+  "description": "A simple bar style pattern for your next project.",
   "main": "index.css",
   "directories": {
     "example": "example"
