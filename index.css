@@ -1,7 +1,8 @@
 @import 'stylep-grid';
 @import 'stylep-alignment';
 
-%bar-inline {
+%bar-block {
+  @extend %row;
   max-height: 58px;
   min-height: 58px;
   padding: 0 16px;
@@ -29,6 +30,8 @@
       flex-wrap: wrap;
       height: 41px;
       list-style: none;
+      margin: 0;
+      padding: 0;
 
       & > li { display: inline-block; }
 
@@ -52,21 +55,17 @@
   }
 }
 
-%bar-block {
-  @extend %bar-inline;
-  @extend %row;
-}
-
 @define-mixin bar-solid
   $background,
   $border-color: transparent,
-  $border-width: 0
+  $border-width: 0,
+  $color
 {
   background-color: $background;
   border-width: $border-width;
   border-style: solid;
   border-color: $border-color;
-  color: contrast($background);
+  color: $color;
 
   @mixin-content;
 }
