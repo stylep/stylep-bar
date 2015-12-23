@@ -21,3 +21,5 @@ h3 { font-weight: 300; }
 .bar--block { @extend %bar-block; }
 
 .bar--solid { @mixin bar-solid #444, transparent, 0, #fff; }
+
+.bar--hollow { @mixin bar-solid transparent, #444, 1px, #444; }
