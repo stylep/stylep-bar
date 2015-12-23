@@ -1,0 +1,102 @@
+/* @import 'stylep-button'; */
+/* Spacer */
+
+/* Container */
+%container, %container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Row */
+
+.bar--block {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  margin-left: var(--gutter-compensation, -.5rem);
+  margin-right: var(--gutter-compensation, -.5rem);
+}
+
+.bar--block {
+  flex-direction: row;
+}
+
+/* Columns */
+
+.bar--block nav {
+  box-sizing: border-box;
+  flex: 1 0 0%;
+  max-width: 100%;
+  padding-left: var(--half-gutter-width, .5rem);
+  padding-right: var(--half-gutter-width, .5rem);
+}
+
+.bar--block nav:nth-child(odd) > ul { justify-content: flex-start; text-align: start; }
+
+.bar--block nav:nth-child(even) > ul { justify-content: flex-end; text-align: end; }
+
+.bar--block nav > ul { align-items: center; }
+
+.bar--block {
+  max-height: 58px;
+  min-height: 58px;
+  padding: 0 16px;
+  z-index: 100;
+}
+
+.bar--block nav {
+  padding: .5em 0;
+}
+
+.bar--block nav:nth-child(even) > ul > li {
+  margin-left: 10px;
+}
+
+.bar--block nav:nth-child(odd) > ul > li {
+  margin-right: 10px;
+}
+
+.bar--block nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  height: 41px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bar--block nav > ul > li {
+  display: inline-block;
+}
+
+.bar--block nav > ul h1, .bar--block nav > ul h2, .bar--block nav > ul h3, .bar--block nav > ul h4, .bar--block nav > ul h5, .bar--block nav > ul h6 {
+  display: inline;
+  font-size: 1.25em;
+  font-weight: 400;
+  margin-right: 30px;
+  margin-top: 0;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+body {
+  background-color: #E8EBEF;
+  color: #6B6B77;
+  font-family: 'Helvetica Neue';
+  overflow-x: hidden;
+}
+
+section {
+  background-color: #fff;
+  padding: 1em 1em .125em;
+  margin-bottom: 1em;
+}
+
+h1 { font-weight: 100; letter-spacing: 1px; }
+h2 { font-weight: 200; }
+h3 { font-weight: 300; }
+
+.bar--solid { background-color: #444; border-width: 0; border-style: solid; border-color: transparent; color: #fff; @mixin-content; }
