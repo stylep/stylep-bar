@@ -56,17 +56,38 @@
 }
 
 @define-mixin bar-solid
-  $background,
-  $border-color: transparent,
-  $border-width: 0,
-  $color
+  $color-passive: #444,
+  $color-text: #fff,
+  $radius-size: 0,
+  $border: none,
+  $shadow: none
 {
-  background-color: $background;
-  border-width: $border-width;
-  border-style: solid;
-  border-color: $border-color;
-  color: $color;
+  background-color: $color-passive;
+  border: $border;
+  border-radius: $border;
+  box-shadow: $shadow;
+  color: $color-text;
 
   @mixin-content;
 }
+
+@define-mixin bar-hollow
+  $color-passive: #444,
+  $color-text: #444,
+  $color-background: transparent,
+  $radius-size: 0,
+  $border-width: 1px,
+  $shadow: none
+{
+  background-color: $color-background;
+  border-width: $border-width;
+  border-style: solid;
+  border-color: $color-passive;
+  border-radius: $radius-size;
+  box-shadow: $shadow;
+  color: $color-text;
+
+  @mixin-content;
+}
+
 
