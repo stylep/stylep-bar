@@ -99,6 +99,6 @@ h1 { font-weight: 100; letter-spacing: 1px; }
 h2 { font-weight: 200; }
 h3 { font-weight: 300; }
 
-.bar--solid { background-color: #444; border-width: 0; border-style: solid; border-color: transparent; color: #fff; @mixin-content; }
+.bar--solid { background-color: #444; border: none; border-radius: none; box-shadow: none; color: #fff; @mixin-content; }
 
-.bar--hollow { background-color: transparent; border-width: 1px; border-style: solid; border-color: #444; color: #444; @mixin-content; }
+.bar--hollow { background-color: transparent; border-width: 1px; border-style: solid; border-color: #444; border-radius: 0; box-shadow: none; color: #444; @mixin-content; }
