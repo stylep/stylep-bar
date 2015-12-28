@@ -23,18 +23,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stylep/stylep-button.git"
+    "url": "git+https://github.com/stylep/stylep-bar.git"
   },
   "keywords": [
     "stylep",
     "postcss",
     "css",
-    "buttons"
+    "bar"
   ],
   "author": "Stephen Way <stephen@stephenway.net> (http://stephenway.net)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stylep/stylep-button/issues"
+    "url": "https://github.com/stylep/stylep-bar/issues"
   },
-  "homepage": "https://github.com/stylep/stylep-button#readme"
+  "homepage": "https://github.com/stylep/stylep-bar#readme"
 }
