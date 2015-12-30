@@ -1,93 +1,65 @@
 @import 'stylep-grid';
 @import 'stylep-alignment';
 
-%bar-block {
+@define-mixin bar-block
+  $bar-size: 58px,
+  $bar-gutter: 16px,
+  $bar-padding: .5em,
+  $bar-z-index: 100 {
   @extend %row;
-  max-height: 58px;
-  min-height: 58px;
-  padding: 0 16px;
-  z-index: 100;
+  height: $bar-size;
+  padding: 0 $bar-gutter;
+  z-index: $bar-z-index;
+  @mixin-content;
 
   & nav {
     @extend %column;
-    padding: .5em 0;
-
-    &:nth-child(even) > ul {
-      @extend %end;
-
-      & > li { margin-left: 10px; }
-    }
-
-    &:nth-child(odd) > ul {
-      @extend %start;
-
-      & > li { margin-right: 10px; }
-    }
+    padding: $bar-padding 0;
 
     & > ul {
       @extend %middle;
       display: flex;
       flex-wrap: wrap;
-      height: 41px;
+      height: calc($bar-size / 1.4);
       list-style: none;
       margin: 0;
       padding: 0;
 
       & > li { display: inline-block; }
+    }
 
-      & h1,
-      & h2,
-      & h3,
-      & h4,
-      & h5,
-      & h6 {
-        display: inline;
-        font-size: 1.25em;
-        font-weight: 400;
-        margin-right: 30px;
-        margin-top: 0;
-        overflow: hidden;
-        position: relative;
-        text-transform: uppercase;
-        padding: 0;
-      }
+    &:nth-child(odd) > ul {
+      @extend %start;
+
+      & > li { margin-right: $bar-gutter; }
+    }
+
+    &:nth-child(even) > ul {
+      @extend %end;
+
+      & > li { margin-left: $bar-gutter; }
     }
   }
 }
 
 @define-mixin bar-solid
-  $color-passive: #444,
-  $color-text: #fff,
-  $radius-size: 0,
-  $border: none,
-  $shadow: none
-{
-  background-color: $color-passive;
-  border: $border;
-  border-radius: $border;
-  box-shadow: $shadow;
-  color: $color-text;
-
+  $bar-color: #444,
+  $bar-text-color: #fff,
+  $bar-shadow: none {
+  background-color: $bar-color;
+  box-shadow: $bar-shadow;
+  color: $bar-text-color;
   @mixin-content;
 }
 
 @define-mixin bar-hollow
-  $color-passive: #444,
-  $color-text: #444,
-  $color-background: transparent,
-  $radius-size: 0,
-  $border-width: 1px,
-  $shadow: none
-{
-  background-color: $color-background;
-  border-width: $border-width;
-  border-style: solid;
-  border-color: $color-passive;
-  border-radius: $radius-size;
-  box-shadow: $shadow;
-  color: $color-text;
-
+  $bar-color: #444,
+  $bar-border-width: 1px,
+  $bar-border-style: solid {
+  border-color: $bar-color;
+  border-style: $bar-border-style;
+  border-width: $bar-border-width;
+  color: $bar-color;
   @mixin-content;
 }
-
 
