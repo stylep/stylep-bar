@@ -1,6 +1,6 @@
 {
   "name": "stylep-bar",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple bar style pattern for your next project.",
   "main": "index.css",
   "directories": {
