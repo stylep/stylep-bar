@@ -1,7 +1,7 @@
 # stylep-bar
 <img src=https://avatars1.githubusercontent.com/u/16121328?v=3&s=200 title=stylep-bar align=right height=95>
 
-A basic element for making horizontal navigation bars.
+A basic element for making horizontal navigation bars. You can setup a bar with one or more `nav` sections.
 
 ## Install
 You can install using the [spm](https://github.com/stylep/stylep) command or install using npm and the project name.
